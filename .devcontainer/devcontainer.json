@@ -25,12 +25,16 @@
             "driver": "SQLite",
             "database": "database.db"
           }
-        ]
+        ],
+        "terminal.integrated.defaultProfile.linux": "bash"
       }
     }
   },
   "forwardPorts": [8888, 8000],
   "postCreateCommand": "python database.py",
   "postStartCommand": "jupyterhub --ip=0.0.0.0 --port=8000 --no-ssl",
-  "remoteUser": "vscode"
+  "remoteUser": "vscode",
+  "containerEnv": {
+    "SHELL": "/bin/bash"
+  }
 }
