@@ -1,28 +1,3 @@
-create table bike_rental
-(
-    id         integer,
-    dteday     text,
-    season     text,
-    yr         integer,
-    mnth       integer,
-    hour       integer,
-    holiday    integer,
-    weekday    integer,
-    workingday integer,
-    weathersit integer,
-    temp       double,
-    atemp      double,
-    hum        double,
-    windspeed  double,
-    casual     integer,
-    registered text,
-    total      text,
-    felt_temp  text,
-    humidity   text,
-    year       text,
-    weather    text
-);
-
 INSERT INTO bike_rental (id, dteday, season, yr, mnth, hour, holiday, weekday, workingday, weathersit, temp, atemp, hum, windspeed, casual, registered, total, felt_temp, humidity, year, weather) VALUES (4011, '2011-06-21', 'Fall', 0, 6, 0, 0, 2, 1, 1, 21.14, 0.5909, 0.78, 11.0014, 10, '23', '33', '22.9994', '78.0', '2011', 'Tuesday');
 INSERT INTO bike_rental (id, dteday, season, yr, mnth, hour, holiday, weekday, workingday, weathersit, temp, atemp, hum, windspeed, casual, registered, total, felt_temp, humidity, year, weather) VALUES (4012, '2011-06-21', 'Fall', 0, 6, 1, 0, 2, 1, 3, 21.14, 0.5909, 0.78, 11.0014, 2, '12', '14', '22.9994', '78.0', '2011', 'Tuesday');
 INSERT INTO bike_rental (id, dteday, season, yr, mnth, hour, holiday, weekday, workingday, weathersit, temp, atemp, hum, windspeed, casual, registered, total, felt_temp, humidity, year, weather) VALUES (4013, '2011-06-21', 'Fall', 0, 6, 2, 0, 2, 1, 3, 21.14, 0.5758, 0.83, 11.0014, 1, '5', '6', '22.0028', '83.0', '2011', 'Tuesday');
