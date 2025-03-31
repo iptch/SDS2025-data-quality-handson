@@ -312,3 +312,7 @@ def close():
         return True
     
     return False
+
+if __name__ == "__main__":
+    """Main function for testing"""
+    init()
