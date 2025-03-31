@@ -30,7 +30,7 @@
     }
   },
   "forwardPorts": [8888, 8000],
-  "postCreateCommand": "mkdir -p data",
-  "postStartCommand": "jupyterhub --ip=0.0.0.0 --port=8000 --no-ssl & python migrate.py --init",
+  "postCreateCommand": "python database.py",
+  "postStartCommand": "jupyterhub --ip=0.0.0.0 --port=8000 --no-ssl",
   "remoteUser": "vscode"
 }
