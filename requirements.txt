@@ -1,0 +1,13 @@
+jupyter
+notebook
+great-expectations
+pandas
+numpy
+matplotlib
+SQLAlchemy
+ipykernel
+black
+pylint
+pyyaml
+jupyterhub
+configurable-http-proxy

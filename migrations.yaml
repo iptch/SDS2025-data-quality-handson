@@ -1,0 +1,85 @@
+migrations:
+  - id: 1
+    tag: initial
+    description: Create users table
+    sql: |
+      CREATE TABLE users (
+        id SERIAL PRIMARY KEY,
+        username VARCHAR(100) NOT NULL UNIQUE,
+        email VARCHAR(255) NOT NULL UNIQUE,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+      INSERT INTO users (username, email) VALUES
+      ('initial', 'initial@example.com');
+
+  - id: 2
+    tag: data_insert
+    description: Insert initial users
+    sql: |
+      INSERT INTO users (username, email) VALUES
+      ('admin', 'admin@example.com'),
+      ('user1', 'user1@example.com'),
+      ('user2', 'user2@example.com');
+
+  - id: 3
+    tag: data_update
+    description: Update user email format
+    sql: |
+      UPDATE users
+      SET email = CONCAT(username, '@company.com')
+      WHERE username != 'admin';
+
+  - id: 4
+    tag: schema_update
+    description: Add role column to users
+    sql: |
+      ALTER TABLE users
+      ADD COLUMN role VARCHAR(50);
+
+  - id: 5
+    tag: data_update
+    description: Set default roles
+    sql: |
+      UPDATE users
+      SET role = 'admin'
+      WHERE username = 'admin';
+      
+      UPDATE users
+      SET role = 'standard'
+      WHERE role IS NULL;
+
+  - id: 6
+    tag: data_insert
+    description: Add additional user
+    sql: |
+      INSERT INTO users (username, email, role)
+      VALUES ('user3', 'user3@company.com', 'standard');
+
+  - id: 7
+    tag: data_delete
+    description: Remove test user
+    sql: |
+      DELETE FROM users
+      WHERE username = 'user2';
+
+  - id: 8
+    tag: schema_update
+    description: Add last_login column
+    sql: |
+      ALTER TABLE users
+      ADD COLUMN last_login TIMESTAMP;
+
+  - id: 9
+    tag: data_update
+    description: Update admin privileges
+    sql: |
+      UPDATE users
+      SET role = 'superadmin'
+      WHERE username = 'admin';
+
+  - id: 10
+    tag: data_cleanup
+    description: Set default last_login value
+    sql: |
+      UPDATE users
+      SET last_login = created_at;
