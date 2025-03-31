@@ -1,0 +1,86 @@
+You're a data engineer at 'Capital Bikes,' a popular bike-sharing company in Washington D.C. A new intern, 'Sparky,' has just finished analyzing the spring data and set up some initial data quality expectations using Great Expectations. 
+Your job is to review Sparky's work, refine the expectations as new seasonal data comes in, and ensure the data pipeline is robust for the entire year. Finally, you'll validate your expectations against the next year's data to ensure long-term stability."
+
+Dataset Breakdown (using the DC Bike Sharing Dataset):
+
+Spring (March - May): Initial analysis and expectation setting.
+Summer (June - August): Adjust expectations for peak usage.
+Fall (September - November): Account for changing weather and usage patterns.
+Winter (December - February): Handle lower usage and potential outliers.
+Next Year: Validate expectations against a new year's data.
+
+Expectations and Seasonal Adjustments:
+
+1. Spring (Sparky's Initial Expectations):
+
+Expectation: expect_column_values_to_be_between(column="cnt", min_value=1000, max_value=5000)
+Rationale: Sparky noticed daily bike rentals were generally within this range during spring.
+Potential Issue: This range might be too narrow for summer.
+
+Expectation: expect_column_values_to_be_of_type(column="dteday", type_="datetime64[ns]")
+Rationale: Sparky checked that the date column is in datetime format.
+Potential Issue: This should hold true for all seasons.
+
+Expectation: expect_column_values_to_be_in_set(column="weekday", value_set=[0, 1, 2, 3, 4, 5, 6])
+Rationale: Sparky verified that weekday column has valid values.
+Potential Issue: this should hold true for all seasons.
+
+Expectation: expect_column_mean_to_be_between(column="temp", min_value=0.5, max_value=0.8) (normalized temperature)
+Rationale: Sparky observed that normalized temperature was within this range during spring.
+Potential Issue: This range will be too low for summer.
+
+
+2. Summer (Adjustments):
+
+Adjustment: expect_column_values_to_be_between(column="cnt", min_value=2000, max_value=8000)
+Rationale: Increased range to accommodate higher summer usage.
+
+Adjustment: expect_column_mean_to_be_between(column="temp", min_value=0.7, max_value=1.0)
+Rationale: Adjusted temperature range for warmer summer months.
+
+New Expectation: expect_column_mean_to_be_higher_than(column="hum", value=0.6) (normalized humidity)
+Rationale: Added expectation for higher humidity in summer.
+
+New Expectation: expect_column_values_to_not_be_null(column="atemp") (normalized feeling temperature)
+Rationale: Added expectation that the feeling temperature is never null, as it is very relevant in summer.
+
+3. Fall (Further Refinement):
+
+Adjustment: expect_column_values_to_be_between(column="cnt", min_value=1500, max_value=6000)
+Rationale: Adjusted range for decreasing usage as weather cools.
+
+Adjustment: expect_column_mean_to_be_between(column="temp", min_value=0.4, max_value=0.7)
+Rationale: Adjusted temperature range for cooler fall months.
+
+New Expectation: expect_column_median_to_be_between(column="windspeed", min_value=0.1, max_value=0.3) (normalized windspeed)
+Rationale: Added expectation for moderate wind speeds, common in fall.
+
+New Expectation: expect_column_values_to_not_be_in_set(column="weathersit", value_set=[1])
+Rationale: Added expectation that weather situation 1 (Clear, Few clouds, Partly cloudy, Partly cloudy) is not as common as in summer.
+
+4. Winter (Handling Low Usage and Outliers):
+
+Adjustment: expect_column_values_to_be_between(column="cnt", min_value=500, max_value=3000)
+Rationale: Significantly reduced range for lower winter usage.
+
+Adjustment: expect_column_mean_to_be_between(column="temp", min_value=0.1, max_value=0.4)
+Rationale: Adjusted temperature range for colder winter months.
+
+New Expectation: expect_column_max_to_be_less_than(column="windspeed", max_value=0.4)
+Rationale: Added expectation for lower maximum wind speeds, as extreme winds are less frequent.
+
+New Expectation: expect_column_values_to_be_in_set(column="weathersit", value_set=[2,3])
+Rationale: Added expectation that weather situation 2 (Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist) and 3 (Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds)1 are more common.   
+
+
+5. Full Year (Consolidation):
+
+Consolidate the adjusted expectations, finding ranges that work for the entire year, possibly using percentiles or more robust statistical measures.
+Consider adding expectations for data completeness, such as expect_column_values_to_not_be_null for critical columns.
+Consider adding expectations for the data distribution.
+6. Next Year (Validation):
+
+Run the consolidated expectations against the next year's data.
+Identify any deviations and discuss potential causes (e.g., changes in bike-sharing policies, infrastructure, or weather patterns).
+Refine the expectations further based on the new data.
+
