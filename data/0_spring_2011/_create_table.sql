@@ -7,7 +7,7 @@ create table bike_rental
     mnth       integer,
     hour       integer,
     holiday    integer,
-    weekday    integer,
+    weekday    text,
     workingday integer,
     weathersit integer,
     temp       double,
