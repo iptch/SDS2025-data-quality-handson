@@ -1,19 +1,30 @@
-You're a data engineer at 'Capital Bikes,' a popular bike-sharing company in Washington D.C. A new intern, 'Sparky,' has just finished analyzing the spring data and set up some initial data quality expectations using Great Expectations. 
-Your job is to review Sparky's work, refine the expectations as new seasonal data comes in, and ensure the data pipeline is robust for the entire year. Finally, you'll validate your expectations against the next year's data to ensure long-term stability."
+You're a data engineer at 'Capital Bikes,' a popular bike-sharing company in Washington D.C. You get tasked with overlooking Data Quality for your bike-sharing company and assessing potential market options or issues. You start with the
+first season (Spring) and setup expecations. As new Data arrives, you refine the expectations as new seasonal data comes in, and ensure the data pipeline is robust for the entire year. Finally, you'll validate your expectations against the next year's data to ensure long-term stability.
 
-Dataset Breakdown (using the DC Bike Sharing Dataset):
-
-Spring (March - May): Initial analysis and expectation setting.
-Summer (June - August): Adjust expectations for peak usage.
-Fall (September - November): Account for changing weather and usage patterns.
-Winter (December - February): Handle lower usage and potential outliers.
-Next Year: Validate expectations against a new year's data.
 
 Expectations and Seasonal Adjustments:
 
-1. Spring (Sparky's Initial Expectations):
+1. Spring (Initial Expectations):
 
-Expectation: expect_column_values_to_be_between(column="cnt", min_value=1000, max_value=5000)
+Expectations: 
+- expect_column_values_to_be_between(column="total", min_value=1000, max_value=5000) -> Expected Bike Rentals (set too low, might be higher in summer)
+- expect_column_values_to_be_of_type(column="dteday", type_="datetime64[ns]") -> Datetype check (should always work out)
+- expect_column_correlation_to_be_between(column_pair=["cnt", "temp"], min_value=0.7, max_value=1.0) -> increasing temperature means more bike rentals (fails in summer when it's really hot)
+
+2. Summer (Adjustment 1):
+- expect_column_max_to_be_greater_than(column="cnt", max_value=9000) -> Bike rentals went up, so we should expect them to rise further in automn, the curve is pointing up.
+- expectation for temperature must be set differently, because when it's very hot, fewer bikes are rented.
+- expect_column_mean_to_be_greater_than(column="hum", value=0.8) -> summer got more humid then spring, so fall must be even more humid
+
+3. Fall (Adjustment 2):
+xxxx
+
+
+
+
+------
+
+Expectation: 
 Rationale: Sparky noticed daily bike rentals were generally within this range during spring.
 Potential Issue: This range might be too narrow for summer.
 
