@@ -14,19 +14,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Node.js
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
-    && apt-get install -y nodejs \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-# Install Node.js SQLite package globally
-RUN npm install -g sqlite3@5.1.7
-
-# Install Python dependencies
-WORKDIR /workspace
-COPY requirements.txt .
-RUN pip install -r requirements.txt
 
 # Create non-root user
 RUN groupadd --gid 1000 vscode \
@@ -34,9 +21,19 @@ RUN groupadd --gid 1000 vscode \
     # Create directory structure for the user
     && mkdir -p /home/vscode/.local/bin \
     && chown -R vscode:vscode /home/vscode/.local
-    
-# Set PATH for vscode user
-ENV PATH="/home/vscode/.local/bin:${PATH}"
 
 # Switch to non-root user
 USER vscode
+
+# Create and activate virtual environment
+RUN python -m venv /home/vscode/.venv
+ENV PATH="/home/vscode/.venv/bin:${PATH}"
+ENV VIRTUAL_ENV="/home/vscode/.venv"
+
+# Install Python dependencies
+WORKDIR /workspace
+COPY --chown=vscode:vscode requirements.txt .
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+# Set PATH for vscode user
+ENV PATH="/home/vscode/.local/bin:${PATH}"
