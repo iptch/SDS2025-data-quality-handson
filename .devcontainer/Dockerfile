@@ -35,5 +35,9 @@ WORKDIR /workspace
 COPY --chown=vscode:vscode requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
+# Install and configure ipykernel
+RUN pip install ipykernel && \
+    python -m ipykernel install --user --name=workshop-venv --display-name="Workshop Environment"
+
 # Set PATH for vscode user
 ENV PATH="/home/vscode/.local/bin:${PATH}"

@@ -24,7 +24,7 @@
       }
     }
   },
-  "postCreateCommand": "python database.py",
+  "postCreateCommand": "python utils/database.py",
   "remoteUser": "vscode",
   "containerEnv": {
     "SHELL": "/bin/bash"

@@ -117,8 +117,8 @@ def get_sql_files_in_dir(directory: str) -> List[str]:
 
 # Global variables
 _conn: Optional[sqlite3.Connection] = None
-_data_dir: str = "data"
-_db_path: str = "database.db"
+_data_dir: str = "../data"
+_db_path: str = "../database.db"
 
 
 def init(db_path: str = "database.db", data_dir: str = "data") -> bool:
@@ -247,6 +247,6 @@ if __name__ == "__main__":
     # Configure logger
     logger.remove()
     logger.add(sys.stderr, format="{time} | {level} | {message}", level="INFO")
-    logger.add("database.log", rotation="10 MB", level="DEBUG")
+    logger.add("../database.log", rotation="10 MB", level="DEBUG")
 
     init()
