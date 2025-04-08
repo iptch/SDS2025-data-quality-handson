@@ -11,3 +11,4 @@ pylint==3.3.6
 pyyaml==6.0.2
 jupyterhub==5.2.1
 configurable-http-proxy==0.3.0
+loguru==0.7.0
