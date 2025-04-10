@@ -247,6 +247,5 @@ if __name__ == "__main__":
     # Configure logger
     logger.remove()
     logger.add(sys.stderr, format="{time} | {level} | {message}", level="INFO")
-    logger.add("../database.log", rotation="10 MB", level="DEBUG")
 
     init()
