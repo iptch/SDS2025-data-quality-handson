@@ -16,10 +16,37 @@ def check(task: int, result: ExpectationValidationResult) -> None:
             if result["expectation_config"]["kwargs"]["column"] != "season":
                 logger.error("The column name is not correct, check again.")
                 return
+        
+        case 2:
+            if result["success"] != False:
+                logger.error("The expectation should fail, check again.")
+                return
+            if result["expectation_config"]["type"] != "expect_column_values_to_be_in_set":
+                logger.error("The expectation type is not correct, check again.")
+                return
+            if result["expectation_config"]["kwargs"]["column"] != "season":
+                logger.error("The column name is not correct, check again.")
+                return
+            if result["result"]["unexpected_list"] != ["Sprung"]:
+                logger.error("The list of unexpected values is not correct, check again.")
+                return
+            
+        case 3:
+            if result["success"] != True:
+                logger.error("The expectation should pass now, check again.")
+                return
+            if result["expectation_config"]["type"] != "expect_column_values_to_be_in_set":
+                logger.error("The expectation type is not correct, check again.")
+                return
+            if result["expectation_config"]["kwargs"]["column"] != "season":
+                logger.error("The column name is not correct, check again.")
+                return
+            if result["result"]["unexpected_list"] != []:
+                logger.error(f"There are still unexpected values, check again. Unexpected values: {result['result']['unexpected_list']}")
+                return
 
         case _:
             logger.error(f"Unknown task: {task}. Please provide a valid task number.")
             return
 
     logger.success("Great job! The result of the expectation is correct. Continue with the next task.")
-
