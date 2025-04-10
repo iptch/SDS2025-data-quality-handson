@@ -2238,3 +2238,5 @@ INSERT INTO bike_rental (id, dteday, season, year, mnth, hour, holiday, weekday,
 INSERT INTO bike_rental (id, dteday, season, year, mnth, hour, holiday, weekday, workingday, weather, temp, felt_temp, humidity, windspeed, casual, registered, total) VALUES (6248, '2011-09-22', 'Summer', 2011, 9, 21, 0, 'Thursday', 1, 'Okay', '22.080000000000002', '22.0028', '89.0', '6.0032', '27', '194', '221');
 INSERT INTO bike_rental (id, dteday, season, year, mnth, hour, holiday, weekday, workingday, weather, temp, felt_temp, humidity, windspeed, casual, registered, total) VALUES (6249, '2011-09-22', 'Summer', 2011, 9, 22, 0, 'Thursday', 1, 'Okay', '21.14', '18.0032', '100.0', '6.0032', '21', '166', '187');
 INSERT INTO bike_rental (id, dteday, season, year, mnth, hour, holiday, weekday, workingday, weather, temp, felt_temp, humidity, windspeed, casual, registered, total) VALUES (6250, '2011-09-22', 'Summer', 2011, 9, 23, 0, 'Thursday', 1, 'Okay', '21.14', '20.003', '94.0', '0.0', '14', '99', '113');
+-- Delete invalid data, if any
+DELETE FROM bike_rental WHERE season = 'Sprung';
