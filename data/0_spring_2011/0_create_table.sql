@@ -14,7 +14,7 @@ create table bike_rental
     felt_temp  text,
     humidity   text,
     windspeed  text,
-    casual     text,
-    registered text,
-    total      text
+    casual     integer,
+    registered integer,
+    total      integer
 );
