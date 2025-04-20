@@ -42,7 +42,7 @@ class DirectorySpecificHandler(SimpleHTTPRequestHandler):
         return request_path
 
 
-def serve_docs(index_path, port=8000):
+def serve_docs(index_path, port=8000, open_browser=True):
     """
     Serve files from the directory containing the index.html file.
     Allows reusing the address quickly after stopping.
@@ -92,8 +92,10 @@ def serve_docs(index_path, port=8000):
         print(f"Serving directory '{doc_directory_str}' containing '{index_path_obj.name}'")
         print(f"Access documentation at: {url}")
         print(f"Server running on port {port}. Run stop_server(server, thread) to stop.")
-
-        webbrowser.open(url)
+        
+        if open_browser:
+            webbrowser.open(url)
+        
         return server, thread
 
     except OSError as e:

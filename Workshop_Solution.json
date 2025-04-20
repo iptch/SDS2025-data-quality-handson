@@ -59,6 +59,7 @@
     "import great_expectations as gx\n",
     "import sqlite3\n",
     "import pandas as pd\n",
+    "import uuid\n",
     "\n",
     "from utils import database\n",
     "from utils.checker import check\n",
@@ -74,10 +75,10 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "\u001b[32m2025-04-19 16:43:16.605\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mreset_database\u001b[0m:\u001b[36m54\u001b[0m - \u001b[1mDatabase reset completed\u001b[0m\n",
-      "\u001b[32m2025-04-19 16:43:16.606\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36minit\u001b[0m:\u001b[36m142\u001b[0m - \u001b[1mInitializing database to step 0: 0_spring_2011\u001b[0m\n",
-      "\u001b[32m2025-04-19 16:43:16.607\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mapply_migration\u001b[0m:\u001b[36m88\u001b[0m - \u001b[1mMigration 0_create_table.sql from 0_spring_2011 - Successfully applied\u001b[0m\n",
-      "\u001b[32m2025-04-19 16:43:16.623\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mapply_migration\u001b[0m:\u001b[36m88\u001b[0m - \u001b[1mMigration 1_bike_rental_2011_spring.sql from 0_spring_2011 - Successfully applied\u001b[0m\n"
+      "\u001b[32m2025-04-20 17:51:00.125\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mreset_database\u001b[0m:\u001b[36m54\u001b[0m - \u001b[1mDatabase reset completed\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:00.126\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36minit\u001b[0m:\u001b[36m142\u001b[0m - \u001b[1mInitializing database to step 0: 0_spring_2011\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:00.128\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mapply_migration\u001b[0m:\u001b[36m88\u001b[0m - \u001b[1mMigration 0_create_table.sql from 0_spring_2011 - Successfully applied\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:00.143\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mapply_migration\u001b[0m:\u001b[36m88\u001b[0m - \u001b[1mMigration 1_bike_rental_2011_spring.sql from 0_spring_2011 - Successfully applied\u001b[0m\n"
      ]
     }
    ],
@@ -136,7 +137,7 @@
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "a1504fb9bfbc4c339feef9fc55a23abb",
+       "model_id": "37609d6a52f740f9b88c92c4a78db39b",
        "version_major": 2,
        "version_minor": 0
       },
@@ -459,7 +460,7 @@
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "eba67455bccd4590a23118094dfbe819",
+       "model_id": "0700095fe2424d75a6bc56e2401bfb30",
        "version_major": 2,
        "version_minor": 0
       },
@@ -474,7 +475,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "\u001b[32m2025-04-19 16:43:16.812\u001b[0m | \u001b[32m\u001b[1mSUCCESS \u001b[0m | \u001b[36mutils.checker\u001b[0m:\u001b[36mcheck\u001b[0m:\u001b[36m64\u001b[0m - \u001b[32m\u001b[1mGreat job! The result of the expectation is correct. Continue with the next task.\u001b[0m\n"
+      "\u001b[32m2025-04-20 17:51:00.268\u001b[0m | \u001b[32m\u001b[1mSUCCESS \u001b[0m | \u001b[36mutils.checker\u001b[0m:\u001b[36mcheck\u001b[0m:\u001b[36m64\u001b[0m - \u001b[32m\u001b[1mGreat job! The result of the expectation is correct. Continue with the next task.\u001b[0m\n"
      ]
     }
    ],
@@ -503,7 +504,7 @@
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "86f8c11cf85b4d6faed8e4156633f3f7",
+       "model_id": "fb623798199c4bf7b0e229c197eee5b3",
        "version_major": 2,
        "version_minor": 0
       },
@@ -518,7 +519,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "\u001b[32m2025-04-19 16:43:16.856\u001b[0m | \u001b[32m\u001b[1mSUCCESS \u001b[0m | \u001b[36mutils.checker\u001b[0m:\u001b[36mcheck\u001b[0m:\u001b[36m64\u001b[0m - \u001b[32m\u001b[1mGreat job! The result of the expectation is correct. Continue with the next task.\u001b[0m\n"
+      "\u001b[32m2025-04-20 17:51:00.296\u001b[0m | \u001b[32m\u001b[1mSUCCESS \u001b[0m | \u001b[36mutils.checker\u001b[0m:\u001b[36mcheck\u001b[0m:\u001b[36m64\u001b[0m - \u001b[32m\u001b[1mGreat job! The result of the expectation is correct. Continue with the next task.\u001b[0m\n"
      ]
     },
     {
@@ -632,7 +633,7 @@
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "7f241811580648d2a21934f006c71a31",
+       "model_id": "fd09b57a325a4301b5beacb1c06f6283",
        "version_major": 2,
        "version_minor": 0
       },
@@ -647,7 +648,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "\u001b[32m2025-04-19 16:43:16.885\u001b[0m | \u001b[32m\u001b[1mSUCCESS \u001b[0m | \u001b[36mutils.checker\u001b[0m:\u001b[36mcheck\u001b[0m:\u001b[36m64\u001b[0m - \u001b[32m\u001b[1mGreat job! The result of the expectation is correct. Continue with the next task.\u001b[0m\n"
+      "\u001b[32m2025-04-20 17:51:00.324\u001b[0m | \u001b[32m\u001b[1mSUCCESS \u001b[0m | \u001b[36mutils.checker\u001b[0m:\u001b[36mcheck\u001b[0m:\u001b[36m64\u001b[0m - \u001b[32m\u001b[1mGreat job! The result of the expectation is correct. Continue with the next task.\u001b[0m\n"
      ]
     },
     {
@@ -730,7 +731,7 @@
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "acb7c559f38d4193a26f2003ab9053e5",
+       "model_id": "dcde3050db1a429989373e33935a8748",
        "version_major": 2,
        "version_minor": 0
       },
@@ -745,7 +746,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "\u001b[32m2025-04-19 16:43:19.323\u001b[0m | \u001b[32m\u001b[1mSUCCESS \u001b[0m | \u001b[36mutils.checker\u001b[0m:\u001b[36mcheck\u001b[0m:\u001b[36m64\u001b[0m - \u001b[32m\u001b[1mGreat job! The result of the expectation is correct. Continue with the next task.\u001b[0m\n"
+      "\u001b[32m2025-04-20 17:51:00.344\u001b[0m | \u001b[32m\u001b[1mSUCCESS \u001b[0m | \u001b[36mutils.checker\u001b[0m:\u001b[36mcheck\u001b[0m:\u001b[36m64\u001b[0m - \u001b[32m\u001b[1mGreat job! The result of the expectation is correct. Continue with the next task.\u001b[0m\n"
      ]
     }
    ],
@@ -774,108 +775,49 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "\u001b[32m2025-04-19 16:36:40.819\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 0_spring_2011\u001b[0m\n",
-      "\u001b[32m2025-04-19 16:36:40.823\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m228\u001b[0m - \u001b[34m\u001b[1mSkipping 0_create_table.sql (already applied)\u001b[0m\n",
-      "\u001b[32m2025-04-19 16:36:40.828\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m228\u001b[0m - \u001b[34m\u001b[1mSkipping 1_bike_rental_2011_spring.sql (already applied)\u001b[0m\n",
-      "\u001b[32m2025-04-19 16:36:40.830\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 1_summer_2011\u001b[0m\n",
-      "\u001b[32m2025-04-19 16:36:40.863\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mapply_migration\u001b[0m:\u001b[36m88\u001b[0m - \u001b[1mMigration 0_bike_rental_2011_summer.sql from 1_summer_2011 - Successfully applied\u001b[0m\n"
-     ]
-    },
-    {
-     "data": {
-      "text/plain": [
-       "True"
-      ]
-     },
-     "execution_count": 12,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "# Change the data to step 1, representing the summer season\n",
-    "database.set_step(1)"
-   ]
-  },
-  {
-   "cell_type": "code",
    "execution_count": 13,
    "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Create a batch definition that specifies which data we want to validate\n",
-    "# Here we're selecting the entire table for our first season (spring 2011)\n",
-    "full_table_batch_definition = table_data_asset.add_batch_definition_whole_table(\n",
-    "    name=\"1_summer_2011\",\n",
-    ")\n",
-    "\n",
-    "# Setup for the batch\n",
-    "full_table_batch = full_table_batch_definition.get_batch()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 14,
-   "metadata": {},
    "outputs": [
     {
      "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>season</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>Spring</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "da68c823fd11448c84452a5e6155e35d",
+       "version_major": 2,
+       "version_minor": 0
+      },
       "text/plain": [
-       "   season\n",
-       "0  Spring"
+       "Calculating Metrics:   0%|          | 0/13 [00:00<?, ?it/s]"
       ]
      },
-     "execution_count": 14,
      "metadata": {},
-     "output_type": "execute_result"
+     "output_type": "display_data"
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "These are the unexpected values: \n"
+     ]
     }
    ],
    "source": [
-    "# Investigate why the expectation failed\n",
-    "query = \"\"\"\n",
-    "SELECT DISTINCT season\n",
-    "FROM bike_rental\n",
-    "\"\"\"\n",
+    "# The date field (dteday) is represented as a string in the database, lets make sure it is in the correct format\n",
+    "# Check the format of the date field \n",
     "\n",
-    "pd.read_sql_query(query, conn)"
+    "### SOLUTION_START ###\n",
+    "expectation = gx.expectations.ExpectColumnValuesToMatchRegex(\n",
+    "    column=\"dteday\",\n",
+    "    regex=r\"^\\d{4}-\\d{2}-\\d{2}$\",\n",
+    ")\n",
+    "# Full solution: regex=r\"^(?:(?:19|20)\\d\\d)-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$\",\n",
+    "### SOLUTION_END ###\n",
+    "\n",
+    "# Validate the expectation\n",
+    "result = full_table_batch.validate(expectation, result_format=\"COMPLETE\")\n",
+    "\n",
+    "# We expect 4 unexpected values, if you only see 3, \n",
+    "# check that your pattern also finds dates with invalid months or days\n",
+    "print(\"These are the unexpected values:\", \", \".join(result[\"result\"][\"unexpected_list\"]))"
    ]
   },
   {
@@ -906,26 +848,16 @@
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### Notice\n",
-    "\n",
-    "If you get an error like this:  \n",
-    "\"DataContextError\": Cannot add ExpectationSuite with name xxx, because it already exists   \n",
-    "This appears because the cell was called twice.  \n",
-    "To solve the issue, just give the suite a new name (for example add \"_1\" to it or something similar)\n"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 14,
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Let's define an expectation suite\n",
+    "# Let's define an new expectation suite\n",
     "# First, we create an expectation Suite to gather all our expectations in one place\n",
-    "suite_name = \"summer_suite\"\n",
+    "suite_name = \"summer_suite_\" + str(uuid.uuid4())\n",
+    "# This is a unique name for our suite, which will help us identify it later\n",
+    "\n",
     "expectation_suite = gx.ExpectationSuite(name=suite_name)\n",
     "\n",
     "# Second, we add two expectations to the expectation suite\n",
@@ -938,42 +870,32 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Let's get our batch definition (we've already defined it before)\n",
-    "batch_def = full_table_batch_definition"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 15,
    "metadata": {},
    "outputs": [],
    "source": [
     "# Set up the validator\n",
-    "validation_name = \"summer_validator\"\n",
+    "validation_name = \"summer_validator_\" + str(uuid.uuid4())\n",
     "\n",
-    "validation_def = gx.ValidationDefinition(\n",
-    "    data = batch_def,\n",
+    "validation_definition = gx.ValidationDefinition(\n",
+    "    data = full_table_batch_definition, # As defined above\n",
     "    suite = expectation_suite,\n",
     "    name = validation_name\n",
     ")\n",
     "\n",
     "# Add it the the context\n",
-    "validation_def = gx_context.validation_definitions.add(validation_def)"
+    "validation_definition = gx_context.validation_definitions.add(validation_definition)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 16,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "d143ee0ca2fb4abe8f1604a4658017b5",
+       "model_id": "73d7bc798e744271b72fe975354dbb4c",
        "version_major": 2,
        "version_minor": 0
       },
@@ -1000,10 +922,10 @@
       "          \"column\": \"total\"\n",
       "        },\n",
       "        \"meta\": {},\n",
-      "        \"id\": \"488e8137-6327-4bbc-87a8-02c7c15422d8\"\n",
+      "        \"id\": \"9f6f42d8-c93c-4c4c-82d2-13a031c72ce7\"\n",
       "      },\n",
       "      \"result\": {\n",
-      "        \"element_count\": 4443,\n",
+      "        \"element_count\": 2203,\n",
       "        \"unexpected_count\": 0,\n",
       "        \"unexpected_percent\": 0.0,\n",
       "        \"partial_unexpected_list\": [],\n",
@@ -1025,10 +947,10 @@
       "          \"column\": \"dteday\"\n",
       "        },\n",
       "        \"meta\": {},\n",
-      "        \"id\": \"4e9e56c0-529d-4b2d-9782-f82263f40f4f\"\n",
+      "        \"id\": \"7aa06da3-6941-4703-87bf-6b4e7c34f1b2\"\n",
       "      },\n",
       "      \"result\": {\n",
-      "        \"element_count\": 4443,\n",
+      "        \"element_count\": 2203,\n",
       "        \"unexpected_count\": 0,\n",
       "        \"unexpected_percent\": 0.0,\n",
       "        \"partial_unexpected_list\": [],\n",
@@ -1042,7 +964,7 @@
       "      }\n",
       "    }\n",
       "  ],\n",
-      "  \"suite_name\": \"summer_suite\",\n",
+      "  \"suite_name\": \"summer_suite_38f70ee5-b316-4e18-ba14-b13254b5bab7\",\n",
       "  \"suite_parameters\": {},\n",
       "  \"statistics\": {\n",
       "    \"evaluated_expectations\": 2,\n",
@@ -1060,7 +982,7 @@
       "      \"batch_identifiers\": {}\n",
       "    },\n",
       "    \"batch_markers\": {\n",
-      "      \"ge_load_time\": \"20250419T143640.908535Z\"\n",
+      "      \"ge_load_time\": \"20250420T155100.432832Z\"\n",
       "    },\n",
       "    \"active_batch_definition\": {\n",
       "      \"datasource_name\": \"sample\",\n",
@@ -1068,13 +990,13 @@
       "      \"data_asset_name\": \"bike_rental\",\n",
       "      \"batch_identifiers\": {}\n",
       "    },\n",
-      "    \"validation_id\": \"492bf22d-8b68-415c-bf0d-73f918f2ac76\",\n",
+      "    \"validation_id\": \"85ed7a8d-5708-49a9-b916-a7a939638f54\",\n",
       "    \"checkpoint_id\": null,\n",
       "    \"run_id\": {\n",
       "      \"run_name\": null,\n",
-      "      \"run_time\": \"2025-04-19T16:36:40.964051+02:00\"\n",
+      "      \"run_time\": \"2025-04-20T17:51:00.447580+02:00\"\n",
       "    },\n",
-      "    \"validation_time\": \"2025-04-19T14:36:40.964051+00:00\",\n",
+      "    \"validation_time\": \"2025-04-20T15:51:00.447580+00:00\",\n",
       "    \"batch_parameters\": null\n",
       "  },\n",
       "  \"id\": null\n",
@@ -1084,41 +1006,32 @@
    ],
    "source": [
     "# Validate the results\n",
-    "validation_results = validation_def.run()\n",
-    "print(validation_results)\n",
+    "results = validation_definition.run()\n",
+    "print(results)\n",
     "\n",
     "# Hint: Click on open in a text editor to view the whole output"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 17,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "file:///var/folders/6b/st166m7n5b91t44xhm_1s5sm0000gn/T/tmpm9cxdor8/index.html\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "# Build the visualization file\n",
-    "data_doc_dir = gx_context.build_data_docs()['local_site']\n",
-    "print(data_doc_dir)"
+    "data_doc_dir = gx_context.build_data_docs()['local_site']"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 18,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Serving directory '/private/var/folders/6b/st166m7n5b91t44xhm_1s5sm0000gn/T/tmpm9cxdor8' containing 'index.html'\n",
+      "Serving directory '/private/var/folders/6b/st166m7n5b91t44xhm_1s5sm0000gn/T/tmpmdefzjw3' containing 'index.html'\n",
       "Access documentation at: http://localhost:8003/\n",
       "Server running on port 8003. Run stop_server(server, thread) to stop.\n"
      ]
@@ -1126,7 +1039,7 @@
    ],
    "source": [
     "# Start the server to view the data docs\n",
-    "server_instance, server_thread = serve_docs(data_doc_dir, port=8003)"
+    "server_instance, server_thread = serve_docs(data_doc_dir, port=8003, open_browser=False)"
    ]
   },
   {
@@ -1138,7 +1051,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 19,
    "metadata": {},
    "outputs": [
     {
@@ -1175,7 +1088,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 20,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1185,9 +1098,24 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 21,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "5cc4764c8fd94d55b9071b460ad192fd",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Calculating Metrics:   0%|          | 0/29 [00:00<?, ?it/s]"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
    "source": [
     "# Task 5: First, add the expectation that the expected column values can now contain either \"Spring\" or \"Summer\"\n",
     "# Hint: Look at Task 1 and follow the pattern.\n",
@@ -1199,49 +1127,15 @@
     ")\n",
     "### SOLUTION_END ###\n",
     "\n",
-    "expectations.append(expectation)\n",
+    "expectation_suite.add_expectation(expectation)\n",
     "\n",
-    "# TODO: Generate the task validation check\n",
-    "# Validate the expectation (to see if the task was done correctly)\n",
-    "# result = full_table_batch.validate(expectation, result_format=\"COMPLETE\")\n",
-    "# check(task=5, result=result)"
+    "# Rerun the validation\n",
+    "validation_results = validation_definition.run()"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Task 6: Copy Paste the Expectation set in Task 4 and add it to our expectations array.\n",
-    "# We want to check if the expectations hold up for summer rush.\n",
-    "\n",
-    "# Copy Paste Solution from Task 4\n",
-    "### SOLUTION_START ###\n",
-    "expectation = gx.expectations.ExpectColumnMaxToBeBetween(\n",
-    "    column=\"total\",\n",
-    "    min_value = 0.9*638,\n",
-    "    max_value = 1.1*638,\n",
-    ")\n",
-    "### SOLUTION_END ###\n",
-    "\n",
-    "expectations.append(expectation)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Add the expectations to our suite\n",
-    "for exp in expectations:\n",
-    "    expectation_suite.add_expectation(exp)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 22,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1250,31 +1144,31 @@
     "\n",
     "# Define the validator\n",
     "### SOLUTION_START ###\n",
-    "validation_def = gx.ValidationDefinition(\n",
-    "    data = batch_def,\n",
+    "validation_definition = gx.ValidationDefinition(\n",
+    "    data = full_table_batch_definition, # As defined above\n",
     "    suite = expectation_suite,\n",
     "    name = validation_name\n",
     ")\n",
     "### SOLUTION_END ###\n",
     "\n",
     "# Add it the the context\n",
-    "validation_def = gx_context.validation_definitions.add(validation_def)"
+    "validation_definition = gx_context.validation_definitions.add(validation_definition)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 23,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "e19ee82fdc904c5f863fae063b4bbd67",
+       "model_id": "a15b5e00f615403c8cac3d967679bbf0",
        "version_major": 2,
        "version_minor": 0
       },
       "text/plain": [
-       "Calculating Metrics:   0%|          | 0/31 [00:00<?, ?it/s]"
+       "Calculating Metrics:   0%|          | 0/29 [00:00<?, ?it/s]"
       ]
      },
      "metadata": {},
@@ -1296,37 +1190,14 @@
       "          \"column\": \"total\"\n",
       "        },\n",
       "        \"meta\": {},\n",
-      "        \"id\": \"488e8137-6327-4bbc-87a8-02c7c15422d8\"\n",
+      "        \"id\": \"9f6f42d8-c93c-4c4c-82d2-13a031c72ce7\"\n",
       "      },\n",
       "      \"result\": {\n",
-      "        \"element_count\": 4443,\n",
+      "        \"element_count\": 2203,\n",
       "        \"unexpected_count\": 0,\n",
       "        \"unexpected_percent\": 0.0,\n",
       "        \"partial_unexpected_list\": [],\n",
       "        \"partial_unexpected_counts\": []\n",
-      "      },\n",
-      "      \"meta\": {},\n",
-      "      \"exception_info\": {\n",
-      "        \"raised_exception\": false,\n",
-      "        \"exception_traceback\": null,\n",
-      "        \"exception_message\": null\n",
-      "      }\n",
-      "    },\n",
-      "    {\n",
-      "      \"success\": true,\n",
-      "      \"expectation_config\": {\n",
-      "        \"type\": \"expect_column_max_to_be_between\",\n",
-      "        \"kwargs\": {\n",
-      "          \"batch_id\": \"sample-bike_rental\",\n",
-      "          \"column\": \"total\",\n",
-      "          \"min_value\": 574.2,\n",
-      "          \"max_value\": 701.8000000000001\n",
-      "        },\n",
-      "        \"meta\": {},\n",
-      "        \"id\": \"86bb3748-0579-48a9-84dd-b946293cb28c\"\n",
-      "      },\n",
-      "      \"result\": {\n",
-      "        \"observed_value\": 651\n",
       "      },\n",
       "      \"meta\": {},\n",
       "      \"exception_info\": {\n",
@@ -1344,10 +1215,10 @@
       "          \"column\": \"dteday\"\n",
       "        },\n",
       "        \"meta\": {},\n",
-      "        \"id\": \"4e9e56c0-529d-4b2d-9782-f82263f40f4f\"\n",
+      "        \"id\": \"7aa06da3-6941-4703-87bf-6b4e7c34f1b2\"\n",
       "      },\n",
       "      \"result\": {\n",
-      "        \"element_count\": 4443,\n",
+      "        \"element_count\": 2203,\n",
       "        \"unexpected_count\": 0,\n",
       "        \"unexpected_percent\": 0.0,\n",
       "        \"partial_unexpected_list\": [],\n",
@@ -1373,10 +1244,10 @@
       "          ]\n",
       "        },\n",
       "        \"meta\": {},\n",
-      "        \"id\": \"a3a06857-b5f1-4be2-9224-4cf68453aaa5\"\n",
+      "        \"id\": \"eca009d5-6b93-4130-852f-908b8ea6a5f4\"\n",
       "      },\n",
       "      \"result\": {\n",
-      "        \"element_count\": 4443,\n",
+      "        \"element_count\": 2203,\n",
       "        \"unexpected_count\": 0,\n",
       "        \"unexpected_percent\": 0.0,\n",
       "        \"partial_unexpected_list\": [],\n",
@@ -1394,11 +1265,11 @@
       "      }\n",
       "    }\n",
       "  ],\n",
-      "  \"suite_name\": \"summer_suite\",\n",
+      "  \"suite_name\": \"summer_suite_38f70ee5-b316-4e18-ba14-b13254b5bab7\",\n",
       "  \"suite_parameters\": {},\n",
       "  \"statistics\": {\n",
-      "    \"evaluated_expectations\": 4,\n",
-      "    \"successful_expectations\": 4,\n",
+      "    \"evaluated_expectations\": 3,\n",
+      "    \"successful_expectations\": 3,\n",
       "    \"unsuccessful_expectations\": 0,\n",
       "    \"success_percent\": 100.0\n",
       "  },\n",
@@ -1412,7 +1283,7 @@
       "      \"batch_identifiers\": {}\n",
       "    },\n",
       "    \"batch_markers\": {\n",
-      "      \"ge_load_time\": \"20250419T143641.440224Z\"\n",
+      "      \"ge_load_time\": \"20250420T155101.193850Z\"\n",
       "    },\n",
       "    \"active_batch_definition\": {\n",
       "      \"datasource_name\": \"sample\",\n",
@@ -1420,13 +1291,13 @@
       "      \"data_asset_name\": \"bike_rental\",\n",
       "      \"batch_identifiers\": {}\n",
       "    },\n",
-      "    \"validation_id\": \"f9b2b81a-2f12-4824-aa7b-f78405af7d2d\",\n",
+      "    \"validation_id\": \"f7585c40-5d47-4813-8709-c0dd4d0f5f3f\",\n",
       "    \"checkpoint_id\": null,\n",
       "    \"run_id\": {\n",
       "      \"run_name\": null,\n",
-      "      \"run_time\": \"2025-04-19T16:36:41.503504+02:00\"\n",
+      "      \"run_time\": \"2025-04-20T17:51:01.217118+02:00\"\n",
       "    },\n",
-      "    \"validation_time\": \"2025-04-19T14:36:41.503504+00:00\",\n",
+      "    \"validation_time\": \"2025-04-20T15:51:01.217118+00:00\",\n",
       "    \"batch_parameters\": null\n",
       "  },\n",
       "  \"id\": null\n",
@@ -1437,8 +1308,8 @@
    "source": [
     "# Validate the results by running the validator\n",
     "### SOLUTION_START ###\n",
-    "validation_results = validation_def.run()\n",
-    "print(validation_results)\n",
+    "results = validation_definition.run()\n",
+    "print(results)\n",
     "### SOLUTION_END ###\n",
     "\n",
     "# Hint: Click on open in a text editor to view the whole output"
@@ -1446,7 +1317,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 24,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1456,43 +1327,43 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 25,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Error: Port 8001 is already in use (possibly by another application).\n"
+      "Serving directory '/private/var/folders/6b/st166m7n5b91t44xhm_1s5sm0000gn/T/tmpmdefzjw3' containing 'index.html'\n",
+      "Access documentation at: http://localhost:8005/\n",
+      "Server running on port 8005. Run stop_server(server, thread) to stop.\n"
      ]
     }
    ],
    "source": [
-    "server_instance = serve_docs(data_doc_dir, port=8001)"
+    "server_instance, server_thread = serve_docs(data_doc_dir, port=8005, open_browser=False)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 26,
    "metadata": {},
    "outputs": [
     {
-     "ename": "NameError",
-     "evalue": "name 'server_thread' is not defined",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
-      "\u001b[31mNameError\u001b[39m                                 Traceback (most recent call last)",
-      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[30]\u001b[39m\u001b[32m, line 2\u001b[39m\n\u001b[32m      1\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m \u001b[33m'\u001b[39m\u001b[33mserver_instance\u001b[39m\u001b[33m'\u001b[39m \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mlocals\u001b[39m() \u001b[38;5;129;01mand\u001b[39;00m server_instance:\n\u001b[32m----> \u001b[39m\u001b[32m2\u001b[39m     stop_server(server_instance, \u001b[43mserver_thread\u001b[49m)\n\u001b[32m      4\u001b[39m     \u001b[38;5;28;01mdel\u001b[39;00m server_instance\n\u001b[32m      5\u001b[39m \u001b[38;5;28;01melse\u001b[39;00m:\n",
-      "\u001b[31mNameError\u001b[39m: name 'server_thread' is not defined"
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Shutting down server on port 8005...\n",
+      "Server on port 8005 stopped and port freed.\n"
      ]
     }
    ],
    "source": [
+    "# To stop the server when you're done\n",
     "if 'server_instance' in locals() and server_instance:\n",
     "    stop_server(server_instance, server_thread)\n",
-    "\n",
     "    del server_instance\n",
+    "    del server_thread\n",
     "else:\n",
     "    print(\"Server was not started or already stopped.\")"
    ]
@@ -1506,16 +1377,40 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 27,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "\u001b[32m2025-04-20 17:51:01.924\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 0_spring_2011\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:01.925\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m228\u001b[0m - \u001b[34m\u001b[1mSkipping 0_create_table.sql (already applied)\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:01.925\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m228\u001b[0m - \u001b[34m\u001b[1mSkipping 1_bike_rental_2011_spring.sql (already applied)\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:01.926\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 1_summer_2011\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:01.948\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mapply_migration\u001b[0m:\u001b[36m88\u001b[0m - \u001b[1mMigration 0_bike_rental_2011_summer.sql from 1_summer_2011 - Successfully applied\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:01.949\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 2_fall_2011\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:01.967\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mapply_migration\u001b[0m:\u001b[36m88\u001b[0m - \u001b[1mMigration 0_bike_rental_2011_fall.sql from 2_fall_2011 - Successfully applied\u001b[0m\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "database.set_step(2)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 28,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1531,9 +1426,27 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 29,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "   mnth  avg(total)\n",
+      "0     3   87.842308\n",
+      "1     4  131.947149\n",
+      "2     5  182.555108\n",
+      "3     6  199.322222\n",
+      "4     7  189.974462\n",
+      "5     8  186.991792\n",
+      "6     9  177.709902\n",
+      "7    10  166.232840\n",
+      "8    11  142.095967\n",
+      "9    12  135.277083\n"
+     ]
+    }
+   ],
    "source": [
     "# Task 7: Let's look at the bike rental trends! \n",
     "# Calculate the current mean of total bike rentals per ***month*** \n",
@@ -1543,7 +1456,7 @@
     "query = \"\"\"\n",
     "SELECT mnth, avg(total)\n",
     "FROM bike_rental\n",
-    "Group By  mnth\n",
+    "GROUP BY  mnth\n",
     "\"\"\"\n",
     "### SOLUTION_END ###\n",
     "\n",
@@ -1555,123 +1468,126 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### Batch Definitions \n",
     "We will now introduce the concept of batch definitions"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 30,
    "metadata": {},
    "outputs": [],
    "source": [
-    "suite_name = \"fall_suite\"\n",
-    "expectation_suite = gx.ExpectationSuite(name=suite_name)\n",
-    "\n",
-    "# Second, we add two expectations to the expectation suite\n",
-    "expectation_suite.add_expectation(gx.expectations.ExpectColumnValuesToNotBeNull(column = 'total'))\n",
-    "expectation_suite.add_expectation(gx.expectations.ExpectColumnValuesToNotBeNull(column = 'dteday'))\n",
-    "\n",
-    "# Add the suite to the context\n",
-    "expectation_suite = gx_context.suites.add(expectation_suite)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Now let's define an expected mean per month\n",
-    "\n",
-    "# Fill in the mean of october\n",
-    "### SOLUTION_START ###\n",
-    "mean_october = 166\n",
-    "### SOLUTION_END ###\n",
-    "\n",
+    "# First lets create a new expectation suite\n",
     "# We set the expectation of the value range of the mean for october\n",
-    "suite_name = \"october_expectation_suite\"\n",
+    "suite_name = \"october_expectation_suite_\" + str(uuid.uuid4())\n",
     "\n",
     "# Create the expectation for october\n",
-    "expectation_october = gx.expectations.ExpectColumnMeanToBeBetween(\n",
-    "    column='total',\n",
-    "    min_value=0.8*mean_october,\n",
-    "    max_value=1.2*mean_october\n",
+    "expectation_october = gx.expectations.ExpectColumnValuesToBeInSet(\n",
+    "    column='mnth',\n",
+    "    value_set=[10],\n",
     ")\n",
     "\n",
     "# Create the suite and add the expectation\n",
-    "expectation_suite = gx.ExpectationSuite(name=suite_name)\n",
-    "expectation_suite.add_expectation(expectation_october)\n",
+    "expectation_suite_october = gx.ExpectationSuite(name=suite_name)\n",
+    "expectation_suite_october.add_expectation(expectation_october)\n",
     "\n",
-    "# Add the suite to the context\n",
-    "expectation_suite = gx_context.suites.add(expectation_suite)\n"
+    "expectation_suite_october = gx_context.suites.add(expectation_suite_october)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 31,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[{'year': None, 'month': None},\n",
+       " {'year': 2011, 'month': 3},\n",
+       " {'year': 2011, 'month': 4},\n",
+       " {'year': 2011, 'month': 5},\n",
+       " {'year': 2011, 'month': 6},\n",
+       " {'year': 2011, 'month': 7},\n",
+       " {'year': 2011, 'month': 8},\n",
+       " {'year': 2011, 'month': 9},\n",
+       " {'year': 2011, 'month': 10},\n",
+       " {'year': 2011, 'month': 11},\n",
+       " {'year': 2011, 'month': 12}]"
+      ]
+     },
+     "execution_count": 31,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "# This expectations needs to be applied to october only\n",
     "# We now introduce the concept of batch definitions\n",
-    "# TODO: fix this, the data is not filtered correctly at the moment\n",
-    "batch_definition_october = table_data_asset.add_batch_definition(\n",
-    "    name=\"october_data\",\n",
-    "    batch_kwargs={\n",
-    "        \"query\": \"SELECT * FROM bike_rental WHERE mnth = 10\"\n",
-    "    }\n",
+    "\n",
+    "table_asset = data_source.add_table_asset(\n",
+    "    table_name=database_table_name, name=\"rentals\"\n",
     ")\n",
     "\n",
-    "# Retrieve the batch for October\n",
-    "batch_october = batch_definition_october.get_batch()"
+    "# Create a batch definition that specifies which data we want to validate\n",
+    "# Use the add_batch_definition_monthly method to create a batch definition\n",
+    "### SOLUTION_START ###\n",
+    "batch_definition_monthly = table_asset.add_batch_definition_monthly(\n",
+    "    name=\"batch_definition_monthly\",\n",
+    "    column=\"dteday\",\n",
+    ")\n",
+    "### SOLUTION_END ###\n",
+    "\n",
+    "# See all the available batches\n",
+    "batch_definition_monthly.get_batch_identifiers_list()"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 32,
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Define the batch\n",
-    "batch_def_october = gx_context.get_batch_definition(\n",
-    "    batch_kwargs={\"data\": batch_october, \"column_list\": [\"total\"]},\n",
-    "    expectation_suite=expectation_suite\n",
+    "# Setup the validator for the monthly data\n",
+    "validation_definition = gx.ValidationDefinition(\n",
+    "    data=batch_definition_monthly,\n",
+    "    suite=expectation_suite_october,\n",
+    "    name=\"october_validation\"\n",
     ")"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 33,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "7101ff7b63d04db2b6fddb2ed1aca15c",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Calculating Metrics:   0%|          | 0/13 [00:00<?, ?it/s]"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 33,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "# Setup the validator \n",
-    "validation_name = \"october_validation\"\n",
-    "validation_def = gx.ValidationDefinition(\n",
-    "    data=batch_def_october,\n",
-    "    suite=expectation_suite,\n",
-    "    name=validation_name\n",
-    ")\n",
-    "\n",
-    "validation_def = gx_context.validation_definitions.add(validation_def)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Run the validation\n",
-    "validation_results = validation_def.run()\n",
-    "\n",
-    "# Build the visualization file\n",
-    "data_doc_dir = gx_context.build_data_docs()['local_site']\n",
-    "\n",
-    "# Serve the .html in the browser\n",
-    "# TODO: need to be navigated bac to our directory, if you leave this in, then database.set_step can not find the folder data\n",
-    "# serve_docs(data_doc_dir)"
+    "# Run the validation only for the month of October\n",
+    "validation_definition.run(batch_parameters={\"year\": 2011, \"month\": 10})[\"success\"]"
    ]
   },
   {
@@ -1684,47 +1600,176 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 34,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "\u001b[32m2025-04-20 17:51:02.167\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 0_spring_2011\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.168\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m228\u001b[0m - \u001b[34m\u001b[1mSkipping 0_create_table.sql (already applied)\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.168\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m228\u001b[0m - \u001b[34m\u001b[1mSkipping 1_bike_rental_2011_spring.sql (already applied)\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.168\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 1_summer_2011\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.169\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m228\u001b[0m - \u001b[34m\u001b[1mSkipping 0_bike_rental_2011_summer.sql (already applied)\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.169\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 2_fall_2011\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.169\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m228\u001b[0m - \u001b[34m\u001b[1mSkipping 0_bike_rental_2011_fall.sql (already applied)\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.170\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 3_winter_2011\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.189\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mapply_migration\u001b[0m:\u001b[36m88\u001b[0m - \u001b[1mMigration 0_bike_rental_2011_winter.sql from 3_winter_2011 - Successfully applied\u001b[0m\n"
+     ]
+    },
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>season</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>Spring</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>Summer</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>Fall</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>Winter</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   season\n",
+       "0  Spring\n",
+       "1  Summer\n",
+       "2    Fall\n",
+       "3  Winter"
+      ]
+     },
+     "execution_count": 34,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "# TODO: load new dataset"
+    "# Add the data from winter 2011 to the data source\n",
+    "database.set_step(3)\n",
+    "\n",
+    "query = \"\"\"\n",
+    "SELECT DISTINCT season\n",
+    "FROM bike_rental\n",
+    "\"\"\"\n",
+    "# Execute the query\n",
+    "pd.read_sql_query(query, conn)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 35,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Expectation 'expect_column_values_to_not_be_null' set on column 'total'\n",
+      "Expectation 'expect_column_values_to_not_be_null' set on column 'dteday'\n",
+      "Expectation 'expect_column_values_to_be_in_set' set on column 'season'\n"
+     ]
+    }
+   ],
    "source": [
-    "# TODO: check the expectations"
+    "for expectation in expectation_suite.expectations:\n",
+    "    print(f\"Expectation '{expectation.expectation_type}' set on column '{expectation.column}'\")"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 36,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "5ca47935eab94fa6b7670017f3258a5c",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Calculating Metrics:   0%|          | 0/2 [00:00<?, ?it/s]"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
    "source": [
-    "# TODO: fix what needs fixing"
+    "# Lets add an expectation that is not available in the GX library\n",
+    "\n",
+    "### SOLUTION_START ###\n",
+    "query =\"\"\"\n",
+    "SELECT *\n",
+    "FROM {batch}\n",
+    "WHERE casual + registered != total\n",
+    "\"\"\"\n",
+    "### SOLUTION_END ###\n",
+    "\n",
+    "expect_casual_and_registered_to_sum_total = gx.expectations.UnexpectedRowsExpectation(\n",
+    "    unexpected_rows_query=query,\n",
+    "    description=\"Check that the sum of casual and registered equals total\",\n",
+    ")\n",
+    "\n",
+    "\n",
+    "result = full_table_batch.validate(\n",
+    "    expect_casual_and_registered_to_sum_total,\n",
+    "    result_format=\"COMPLETE\",\n",
+    ")"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 37,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "UnexpectedRowsExpectation(id='a64da316-23b2-454c-88a7-aa5b5a2b3891', meta=None, notes=None, result_format=<ResultFormat.BASIC: 'BASIC'>, description='Check that the sum of casual and registered equals total', catch_exceptions=False, rendered_content=None, windows=None, batch_id=None, unexpected_rows_query='\\nSELECT *\\nFROM {batch}\\nWHERE casual + registered != total')"
+      ]
+     },
+     "execution_count": 37,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "# TODO: Maybe add something even more complex?"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# TODO: Recheck the Expectations"
+    "# Add the expectation to the suite for future use\n",
+    "expectation_suite.add_expectation(expect_casual_and_registered_to_sum_total)"
    ]
   },
   {
@@ -1736,20 +1781,261 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 38,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "\u001b[32m2025-04-20 17:51:02.227\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 0_spring_2011\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.228\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m228\u001b[0m - \u001b[34m\u001b[1mSkipping 0_create_table.sql (already applied)\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.228\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m228\u001b[0m - \u001b[34m\u001b[1mSkipping 1_bike_rental_2011_spring.sql (already applied)\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.228\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 1_summer_2011\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.229\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m228\u001b[0m - \u001b[34m\u001b[1mSkipping 0_bike_rental_2011_summer.sql (already applied)\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.229\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 2_fall_2011\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.230\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m228\u001b[0m - \u001b[34m\u001b[1mSkipping 0_bike_rental_2011_fall.sql (already applied)\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.230\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 3_winter_2011\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.231\u001b[0m | \u001b[34m\u001b[1mDEBUG   \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m228\u001b[0m - \u001b[34m\u001b[1mSkipping 0_bike_rental_2011_winter.sql (already applied)\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.231\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mset_step\u001b[0m:\u001b[36m221\u001b[0m - \u001b[1mProcessing directory: 4_full_2012\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.249\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mapply_migration\u001b[0m:\u001b[36m88\u001b[0m - \u001b[1mMigration 0_bike_rental_2012_spring.sql from 4_full_2012 - Successfully applied\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.267\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mapply_migration\u001b[0m:\u001b[36m88\u001b[0m - \u001b[1mMigration 1_bike_rental_2012_summer.sql from 4_full_2012 - Successfully applied\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.284\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mapply_migration\u001b[0m:\u001b[36m88\u001b[0m - \u001b[1mMigration 2_bike_rental_2012_fall.sql from 4_full_2012 - Successfully applied\u001b[0m\n",
+      "\u001b[32m2025-04-20 17:51:02.301\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mutils.database\u001b[0m:\u001b[36mapply_migration\u001b[0m:\u001b[36m88\u001b[0m - \u001b[1mMigration 3_bike_rental_2012_winter.sql from 4_full_2012 - Successfully applied\u001b[0m\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 38,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "# TODO: load new dataset"
+    "# Load data from the next year\n",
+    "database.set_step(4)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 39,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "3ba820b7e16a4d549d1601d6ff55377d",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Calculating Metrics:   0%|          | 0/31 [00:00<?, ?it/s]"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{\n",
+      "  \"success\": false,\n",
+      "  \"results\": [\n",
+      "    {\n",
+      "      \"success\": true,\n",
+      "      \"expectation_config\": {\n",
+      "        \"type\": \"expect_column_values_to_not_be_null\",\n",
+      "        \"kwargs\": {\n",
+      "          \"batch_id\": \"sample-rentals\",\n",
+      "          \"column\": \"total\"\n",
+      "        },\n",
+      "        \"meta\": {},\n",
+      "        \"id\": \"9f6f42d8-c93c-4c4c-82d2-13a031c72ce7\"\n",
+      "      },\n",
+      "      \"result\": {\n",
+      "        \"element_count\": 17379,\n",
+      "        \"unexpected_count\": 0,\n",
+      "        \"unexpected_percent\": 0.0,\n",
+      "        \"partial_unexpected_list\": [],\n",
+      "        \"partial_unexpected_counts\": []\n",
+      "      },\n",
+      "      \"meta\": {},\n",
+      "      \"exception_info\": {\n",
+      "        \"raised_exception\": false,\n",
+      "        \"exception_traceback\": null,\n",
+      "        \"exception_message\": null\n",
+      "      }\n",
+      "    },\n",
+      "    {\n",
+      "      \"success\": true,\n",
+      "      \"expectation_config\": {\n",
+      "        \"type\": \"expect_column_values_to_not_be_null\",\n",
+      "        \"kwargs\": {\n",
+      "          \"batch_id\": \"sample-rentals\",\n",
+      "          \"column\": \"dteday\"\n",
+      "        },\n",
+      "        \"meta\": {},\n",
+      "        \"id\": \"7aa06da3-6941-4703-87bf-6b4e7c34f1b2\"\n",
+      "      },\n",
+      "      \"result\": {\n",
+      "        \"element_count\": 17379,\n",
+      "        \"unexpected_count\": 0,\n",
+      "        \"unexpected_percent\": 0.0,\n",
+      "        \"partial_unexpected_list\": [],\n",
+      "        \"partial_unexpected_counts\": []\n",
+      "      },\n",
+      "      \"meta\": {},\n",
+      "      \"exception_info\": {\n",
+      "        \"raised_exception\": false,\n",
+      "        \"exception_traceback\": null,\n",
+      "        \"exception_message\": null\n",
+      "      }\n",
+      "    },\n",
+      "    {\n",
+      "      \"success\": false,\n",
+      "      \"expectation_config\": {\n",
+      "        \"type\": \"expect_column_values_to_be_in_set\",\n",
+      "        \"kwargs\": {\n",
+      "          \"batch_id\": \"sample-rentals\",\n",
+      "          \"column\": \"season\",\n",
+      "          \"value_set\": [\n",
+      "            \"Spring\",\n",
+      "            \"Summer\"\n",
+      "          ]\n",
+      "        },\n",
+      "        \"meta\": {},\n",
+      "        \"id\": \"eca009d5-6b93-4130-852f-908b8ea6a5f4\"\n",
+      "      },\n",
+      "      \"result\": {\n",
+      "        \"element_count\": 17379,\n",
+      "        \"unexpected_count\": 8474,\n",
+      "        \"unexpected_percent\": 48.7599976983716,\n",
+      "        \"partial_unexpected_list\": [\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\",\n",
+      "          \"Fall\"\n",
+      "        ],\n",
+      "        \"missing_count\": 0,\n",
+      "        \"missing_percent\": 0.0,\n",
+      "        \"unexpected_percent_total\": 48.7599976983716,\n",
+      "        \"unexpected_percent_nonmissing\": 48.7599976983716,\n",
+      "        \"partial_unexpected_counts\": [\n",
+      "          {\n",
+      "            \"value\": \"Fall\",\n",
+      "            \"count\": 20\n",
+      "          }\n",
+      "        ]\n",
+      "      },\n",
+      "      \"meta\": {},\n",
+      "      \"exception_info\": {\n",
+      "        \"raised_exception\": false,\n",
+      "        \"exception_traceback\": null,\n",
+      "        \"exception_message\": null\n",
+      "      }\n",
+      "    },\n",
+      "    {\n",
+      "      \"success\": true,\n",
+      "      \"expectation_config\": {\n",
+      "        \"type\": \"unexpected_rows_expectation\",\n",
+      "        \"kwargs\": {\n",
+      "          \"batch_id\": \"sample-rentals\",\n",
+      "          \"unexpected_rows_query\": \"\\nSELECT *\\nFROM {batch}\\nWHERE casual + registered != total\"\n",
+      "        },\n",
+      "        \"meta\": {},\n",
+      "        \"id\": \"a64da316-23b2-454c-88a7-aa5b5a2b3891\",\n",
+      "        \"description\": \"Check that the sum of casual and registered equals total\"\n",
+      "      },\n",
+      "      \"result\": {\n",
+      "        \"observed_value\": 0,\n",
+      "        \"details\": {\n",
+      "          \"unexpected_rows\": []\n",
+      "        }\n",
+      "      },\n",
+      "      \"meta\": {},\n",
+      "      \"exception_info\": {\n",
+      "        \"raised_exception\": false,\n",
+      "        \"exception_traceback\": null,\n",
+      "        \"exception_message\": null\n",
+      "      }\n",
+      "    }\n",
+      "  ],\n",
+      "  \"suite_name\": \"summer_suite_38f70ee5-b316-4e18-ba14-b13254b5bab7\",\n",
+      "  \"suite_parameters\": {},\n",
+      "  \"statistics\": {\n",
+      "    \"evaluated_expectations\": 4,\n",
+      "    \"successful_expectations\": 3,\n",
+      "    \"unsuccessful_expectations\": 1,\n",
+      "    \"success_percent\": 75.0\n",
+      "  },\n",
+      "  \"meta\": {\n",
+      "    \"great_expectations_version\": \"1.3.12\",\n",
+      "    \"batch_spec\": {\n",
+      "      \"type\": \"table\",\n",
+      "      \"data_asset_name\": \"rentals\",\n",
+      "      \"table_name\": \"bike_rental\",\n",
+      "      \"schema_name\": null,\n",
+      "      \"batch_identifiers\": {}\n",
+      "    },\n",
+      "    \"batch_markers\": {\n",
+      "      \"ge_load_time\": \"20250420T155102.313214Z\"\n",
+      "    },\n",
+      "    \"active_batch_definition\": {\n",
+      "      \"datasource_name\": \"sample\",\n",
+      "      \"data_connector_name\": \"fluent\",\n",
+      "      \"data_asset_name\": \"rentals\",\n",
+      "      \"batch_identifiers\": {}\n",
+      "    },\n",
+      "    \"validation_id\": \"714c51c3-63f5-4773-8f53-06075c0440d9\",\n",
+      "    \"checkpoint_id\": null,\n",
+      "    \"run_id\": {\n",
+      "      \"run_name\": null,\n",
+      "      \"run_time\": \"2025-04-20T17:51:02.350899+02:00\"\n",
+      "    },\n",
+      "    \"validation_time\": \"2025-04-20T15:51:02.350899+00:00\",\n",
+      "    \"batch_parameters\": null\n",
+      "  },\n",
+      "  \"id\": null\n",
+      "}\n"
+     ]
+    }
+   ],
    "source": [
-    "# TODO: check the expectations"
+    "# Create a batch definition that specifies which data we want to validate\n",
+    "\n",
+    "batch_definition_all = table_asset.add_batch_definition_whole_table(\n",
+    "    name=\"batch_definition_all\",\n",
+    ")\n",
+    "# Setup the validator\n",
+    "validation_definition = gx.ValidationDefinition(\n",
+    "    data=batch_definition_all,\n",
+    "    suite=expectation_suite,\n",
+    "    name=\"all_validation\"\n",
+    ")\n",
+    "# Run the validation\n",
+    "validation_results = validation_definition.run()\n",
+    "print(validation_results)"
    ]
   },
   {
@@ -1757,48 +2043,6 @@
    "metadata": {},
    "source": [
     "Discuss these expectations => did you do a good job? What changed? Do you now have confidence in your data foundation for your AI model? Discuss pros and cons of using a Testing Framework!"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "# Task 7: Think about AI Implementation"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Could you now implement AI to design a flexible pricing model? How would you do it? What is the advantage over doing this by hand?"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# TODO: Make this last part better and more to the point ^^"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "# Cleanup"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# To stop the server when you're done (run this in another cell):\n",
-    "# TODO: add function cleanup to utils which calls server.shutdown and cleans other things up if necessary\n",
-    "# cleanup()\n",
-    "# server.shutdown()"
    ]
   }
  ],
