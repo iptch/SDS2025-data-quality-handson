@@ -44,7 +44,19 @@ def check(task: int, result: ExpectationValidationResult) -> None:
             if result["result"]["unexpected_list"] != []:
                 logger.error(f"There are still unexpected values, check again. Unexpected values: {result['result']['unexpected_list']}")
                 return
-
+        case 4:
+            if result["success"] != True:
+                logger.error("The expectation should pass now, check again.")
+                return
+            if result["expectation_config"]["type"] != "expect_column_max_to_be_between":
+                logger.error("The expectation type is not correct, check again.")
+                return
+            if result["expectation_config"]["kwargs"]["column"] != "total":
+                logger.error("The column name is not correct, check again.")
+                return
+            if result["result"]["observed_value"] != 638:
+                logger.error(f"The observed value is not correct, check again. Observed value: {result['result']['observed_value']}")
+                return
         case _:
             logger.error(f"Unknown task: {task}. Please provide a valid task number.")
             return
