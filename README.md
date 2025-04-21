@@ -17,9 +17,12 @@ Once your codespace environment is ready, you'll have a fully configured develop
 To begin the workshop:
 
 1. In the file explorer sidebar, locate and open `Workshop_Tasks.ipynb`
-2. If prompted, select the Python kernel to use
-3. Work through the notebook tasks sequentially, following the instructions in each cell
-4. Execute the code cells as you progress through the workshop
+2. Setup the notebook kernel
+    + Click "Select Kernel" in the top right part of the editor
+    + Click "Jupyter Kernel..."
+    + Click "Workshop Environment"
+4. Work through the notebook tasks sequentially, following the instructions in each cell
+5. Execute the code cells as you progress through the workshop
 
 The notebook contains a series of guided tasks that will help you learn about data quality principles and practices.
 
