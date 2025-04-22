@@ -26,12 +26,4 @@ To begin the workshop:
 
 The notebook contains a series of guided tasks that will help you learn about data quality principles and practices.
 
-## Requirements
-
-All necessary packages should be pre-installed in the codespace environment. If you need to install additional dependencies, you can use:
-
-```bash
-pip install -r requirements.txt
-```
-
 Happy learning!

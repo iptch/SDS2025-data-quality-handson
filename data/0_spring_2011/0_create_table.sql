@@ -12,7 +12,7 @@ create table bike_rental
     weather    text,
     temp       double,
     felt_temp  text,
-    humidity   text,
+    humidity   double,
     windspeed  text,
     casual     integer,
     registered integer,

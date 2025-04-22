@@ -76,6 +76,8 @@ def check(task: int, result: Any) -> None:
             if not ((result["result"]["unexpected_count"] == 3) or (result["result"]["unexpected_count"] == 4)):
                 logger.error("The unexpected count is not correct, check again.")
                 return
+            if result["result"]["unexpected_count"] == 3:
+                logger.warning("There is another unexpected value to be found with a more advanced regex pattern.")
         case 6:
             if not result["success"]:
                 logger.error("The validation suite should be successful, check again.")
