@@ -3,7 +3,7 @@ from typing import Any
 from great_expectations.core.expectation_validation_result import ExpectationValidationResult
 from great_expectations.core.batch_definition import BatchDefinition
 
-def check(task: int, result: Any) -> None:
+def check_solution(task: int, result: Any) -> None:
     assert isinstance(task, int), "Task must be an integer."
 
     match task:
