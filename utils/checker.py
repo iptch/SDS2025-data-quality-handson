@@ -3,7 +3,7 @@ from typing import Any
 from great_expectations.core.expectation_validation_result import ExpectationValidationResult
 from great_expectations.core.batch_definition import BatchDefinition
 
-def check(task: int, result: Any) -> None:
+def check_solution(task: int, result: Any) -> None:
     assert isinstance(task, int), "Task must be an integer."
 
     match task:
@@ -33,7 +33,8 @@ def check(task: int, result: Any) -> None:
             if result["result"]["unexpected_list"] != ["Sprung"]:
                 logger.error("The list of unexpected values is not correct, check again.")
                 return
-            
+
+            logger.success("!!! We expect the expectation to fail here. Everything is working as expected! !!!")
         case 3:
             assert isinstance(result, ExpectationValidationResult), "Result must be an instance of ExpectationValidationResult."
             if result["success"] != True:
