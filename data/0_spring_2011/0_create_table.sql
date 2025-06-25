@@ -11,9 +11,9 @@ create table bike_rental
     workingday integer,
     weather    text,
     temp       double,
-    felt_temp  text,
+    felt_temp  double,
     humidity   double,
-    windspeed  text,
+    windspeed  double,
     casual     integer,
     registered integer,
     total      integer
